@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Bt10: React.FC = () => {
   const [keyInfo, setKeyInfo] = useState<{ key: string; keyCode: number }>();
 
+  //keycode theo console
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const { key, keyCode } = event;
@@ -12,6 +13,19 @@ const Bt10: React.FC = () => {
     window.addEventListener('keydown', handleKeyDown);
 
   }, []); 
+
+  //bảng mã ascii
+  // useEffect(() => {
+  //   const handleKeyDown = (event: KeyboardEvent) => {
+  //     const { key } = event;
+  //     const keyCode = key.charCodeAt(0);
+  //     setKeyInfo({ key ,keyCode });
+  //   };
+
+  //   window.addEventListener('keydown', handleKeyDown);
+
+  // }, []); 
+
 
   return (
     <div>
